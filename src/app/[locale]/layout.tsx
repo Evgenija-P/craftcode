@@ -26,13 +26,14 @@ export const metadata: Metadata = {
 	description: 'Portfolio website of CraftCode'
 }
 
-type RootLayoutProps = {
+export default function RootLayout({
+	children,
+	params
+}: {
 	children: React.ReactNode
 	params: { locale: Locale }
-}
-
-export default async function RootLayout({ children, params }: Readonly<RootLayoutProps>) {
-	const { locale } = await params
+}) {
+	const { locale } = params
 
 	if (!hasLocale(routing.locales, locale)) {
 		notFound()
