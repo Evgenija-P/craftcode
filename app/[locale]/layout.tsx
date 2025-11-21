@@ -1,3 +1,5 @@
+import { Locale } from '@/types/types'
+
 import Header from '../../components/sections/Header'
 
 import { routing } from '@/i18n/routing'
@@ -33,18 +35,20 @@ export default async function RootLayout({
 }) {
 	const { locale } = await params
 
+	const safeLocale: Locale = locale === 'uk' || locale === 'en' ? (locale as Locale) : 'uk'
+
 	if (!hasLocale(routing.locales, locale)) {
 		notFound()
 	}
 
 	return (
-		<html lang={locale} suppressHydrationWarning>
+		<html lang={safeLocale} suppressHydrationWarning>
 			<body
 				className={`${juraSans.variable} ${montserrat.variable} antialiased relative pt-[74px]`}
 			>
 				<ThemeProvider attribute='class' defaultTheme='system' enableSystem>
 					<NextIntlClientProvider>
-						<Header locale={locale} />
+						<Header locale={safeLocale} />
 						{children}
 					</NextIntlClientProvider>
 				</ThemeProvider>
