@@ -39,22 +39,22 @@
         "/hooks/*"
       ],
       "@/styles/*": [
-        "./src/styles/*"
+        "/styles/*"
       ],
       "@/images/*": [
         "./public/images/*"
       ],
       "@/helpers/*": [
-        "./src/helpers/*"
+        "/helpers/*"
       ],
       "@/lib/*": [
-        "./src/lib/*"
+        "/lib/*"
       ],
       "@/utils/*": [
-        "./src/utils/*"
+        "/utils/*"
       ],
       "@/data/*": [
-        "./src/data/*"
+        "/data/*"
       ]
     }
   },
