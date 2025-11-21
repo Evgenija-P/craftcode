@@ -1,5 +1,5 @@
+import { routing } from './i18n/routing'
 import { Locale } from './types/types'
-import { routing } from '@/i18n/routing'
 
 import { NextRequest, NextResponse } from 'next/server'
 

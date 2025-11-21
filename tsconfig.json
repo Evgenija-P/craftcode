@@ -27,16 +27,16 @@
         "./src/*"
       ],
       "@/types/*": [
-        "./src/types/*"
+        "/types/*"
       ],
       "@/assets/*": [
-        "./src/assets/*"
+        "/assets/*"
       ],
       "@/components/*": [
-        "./src/components/*"
+        "/components/*"
       ],
       "@/hooks/*": [
-        "./src/hooks/*"
+        "/hooks/*"
       ],
       "@/styles/*": [
         "./src/styles/*"

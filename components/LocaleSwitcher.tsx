@@ -1,9 +1,8 @@
 'use client'
 
-import { Locale } from '@/types/types'
-
-import { Link, usePathname } from '@/i18n/navigation'
-import { routing } from '@/i18n/routing'
+import { Link, usePathname } from '../i18n/navigation'
+import { routing } from '../i18n/routing'
+import { Locale } from '../types/types'
 
 import { useMemo } from 'react'
 

@@ -1,6 +1,6 @@
-import Header from '@/components/sections/Header'
+import Header from '../../components/sections/Header'
+import { routing } from '../../i18n/routing'
 
-import { routing } from '@/i18n/routing'
 import '@/styles/globals.css'
 
 import type { Metadata } from 'next'

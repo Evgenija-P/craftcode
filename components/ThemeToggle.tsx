@@ -1,6 +1,6 @@
 'use client'
 
-import { useMounted } from '@/hooks/useMounted'
+import { useMounted } from '../hooks/useMounted'
 
 import { useTheme } from 'next-themes'
 
