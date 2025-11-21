@@ -1,12 +1,12 @@
+import en from '../messages/en.json'
+import uk from '../messages/uk.json'
+
 import { getRequestConfig } from 'next-intl/server'
 import { cookies } from 'next/headers'
 
 export default getRequestConfig(async () => {
 	const store = await cookies()
 	const locale = store.get('locale')?.value || 'uk'
-
-	return {
-		locale,
-		messages: (await import(`../../messages/${locale}.json`)).default
-	}
+	const messages = locale === 'en' ? en : uk
+	return { locale, messages }
 })

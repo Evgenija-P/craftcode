@@ -4,20 +4,15 @@ import { Link, usePathname } from '../i18n/navigation'
 import { routing } from '../i18n/routing'
 import { Locale } from '../types/types'
 
-import { useMemo } from 'react'
-
 const LocaleSwitcher = ({ locale }: { locale: string }) => {
 	const pathname = usePathname()
 
 	const languages = { en: 'eng', uk: 'ukr' }
 
-	// Поточна локаль з URL
 	const segments = pathname.split('/').filter(Boolean)
 	const firstSegment = segments[0]
-	// const currentLocale = routing.locales.includes(firstSegment as Locale)
-	// 	? (firstSegment as Locale)
-	// 	: routing.defaultLocale
 
+	// шлях без локалі
 	const pathWithoutLocale = routing.locales.includes(firstSegment as Locale)
 		? `/${segments.slice(1).join('/')}`
 		: pathname
@@ -25,15 +20,13 @@ const LocaleSwitcher = ({ locale }: { locale: string }) => {
 	const nextLocale = locale === 'en' ? 'uk' : 'en'
 	const nextLanguageName = languages[nextLocale]
 
-	const href = useMemo(() => pathWithoutLocale || '/', [pathWithoutLocale])
-
 	return (
 		<Link
-			href={href}
-			locale={nextLocale}
+			href={pathWithoutLocale || '/'} // 👈 без локалі
+			locale={nextLocale} // 👈 next-intl сам додасть /uk або /en
 			className='flex gap-2 items-center cursor-pointer hover:text-gr-5 duration-200'
 		>
-			<div className='min-w-8 '>{nextLanguageName}</div>
+			<div className='min-w-8'>{nextLanguageName}</div>
 		</Link>
 	)
 }

@@ -1,6 +1,6 @@
 import Header from '../../components/sections/Header'
-import { routing } from '../../i18n/routing'
 
+import { routing } from '@/i18n/routing'
 import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
 	description: 'Portfolio website of CraftCode'
 }
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 	params
 }: {
 	children: React.ReactNode
-	params: { locale: string }
+	params: Promise<{ locale: string }>
 }) {
-	const { locale } = params
+	const { locale } = await params
 
 	if (!hasLocale(routing.locales, locale)) {
 		notFound()

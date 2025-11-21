@@ -24,37 +24,37 @@
     ],
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ],
       "@/types/*": [
-        "/types/*"
+        "./types/*"
       ],
       "@/assets/*": [
-        "/assets/*"
+        "./assets/*"
       ],
       "@/components/*": [
-        "/components/*"
+        "./components/*"
       ],
       "@/hooks/*": [
-        "/hooks/*"
+        "./hooks/*"
       ],
       "@/styles/*": [
-        "/styles/*"
+        "./styles/*"
       ],
       "@/images/*": [
         "./public/images/*"
       ],
       "@/helpers/*": [
-        "/helpers/*"
+        "./helpers/*"
       ],
       "@/lib/*": [
-        "/lib/*"
+        "./lib/*"
       ],
       "@/utils/*": [
-        "/utils/*"
+        "./utils/*"
       ],
       "@/data/*": [
-        "/data/*"
+        "./data/*"
       ]
     }
   },
