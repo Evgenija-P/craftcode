@@ -1,7 +1,5 @@
 import Header from '@/components/sections/Header'
 
-import { Locale } from '@/types/types'
-
 import { routing } from '@/i18n/routing'
 import '@/styles/globals.css'
 
@@ -31,7 +29,7 @@ export default function RootLayout({
 	params
 }: {
 	children: React.ReactNode
-	params: { locale: Locale }
+	params: { locale: string }
 }) {
 	const { locale } = params
 

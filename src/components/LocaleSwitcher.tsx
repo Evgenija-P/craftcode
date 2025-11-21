@@ -7,7 +7,7 @@ import { routing } from '@/i18n/routing'
 
 import { useMemo } from 'react'
 
-const LocaleSwitcher = ({ locale }: { locale: Locale }) => {
+const LocaleSwitcher = ({ locale }: { locale: string }) => {
 	const pathname = usePathname()
 
 	const languages = { en: 'eng', uk: 'ukr' }

@@ -1,6 +1,4 @@
-import { Locale } from '@/types/types'
-
-export default function Home({ params }: { params: { locale: Locale } }) {
+export default function Home({ params }: { params: { locale: string } }) {
 	const { locale } = params
 
 	return (
