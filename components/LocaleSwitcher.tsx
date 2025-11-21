@@ -4,7 +4,7 @@ import { Link, usePathname } from '../i18n/navigation'
 import { routing } from '../i18n/routing'
 import { Locale } from '../types/types'
 
-const LocaleSwitcher = ({ locale }: { locale: Locale }) => {
+const LocaleSwitcher = ({ locale }: { locale: string }) => {
 	const pathname = usePathname()
 
 	const languages = { en: 'eng', uk: 'ukr' }

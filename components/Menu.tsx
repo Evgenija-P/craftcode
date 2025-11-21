@@ -1,8 +1,6 @@
-import { Locale } from '@/types/types'
-
 import { Link } from '../i18n/navigation'
 
-const Menu = ({ locale }: { locale: Locale }) => {
+const Menu = ({ locale }: { locale: string }) => {
 	const navItems = [
 		// {
 		// 	label: { uk: 'Головна', en: 'Home' },

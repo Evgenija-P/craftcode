@@ -1,5 +1,3 @@
-import { Locale } from '@/types/types'
-
 import Header from '../../components/sections/Header'
 
 import { routing } from '@/i18n/routing'
@@ -31,7 +29,7 @@ export default async function RootLayout({
 	params
 }: {
 	children: React.ReactNode
-	params: Promise<{ locale: Locale }>
+	params: Promise<{ locale: string }>
 }) {
 	const { locale } = await params
 

@@ -1,6 +1,4 @@
-import { Locale } from '@/types/types'
-
-export default async function Home({ params }: { params: Promise<{ locale: Locale }> }) {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params
 
 	return (
