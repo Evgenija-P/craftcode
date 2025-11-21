@@ -1,3 +1,5 @@
+import { Locale } from '@/types/types'
+
 import LocaleSwitcher from '../LocaleSwitcher'
 import Menu from '../Menu'
 import ThemeToggle from '../ThemeToggle'
@@ -5,7 +7,7 @@ import Logo from '../UI/Logo'
 import BaseSection from '../base/BaseSections'
 import Wrapper from '../base/Wrapper'
 
-const Header = ({ locale }: { locale: string }) => {
+const Header = ({ locale }: { locale: Locale }) => {
 	return (
 		<header className='fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-b-primary border-opacity-20'>
 			<BaseSection>
