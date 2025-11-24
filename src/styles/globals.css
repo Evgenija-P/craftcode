@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+:root {
+	--primary: #9b7fbf;
+	--secondary: #1a1625;
+
+	--background: #fff; /* колір фону у світлій темі, колір заголовків у темній темі*/
+	--foreground: #0f0d15; /* колір фону у темній темі, колір заголовків у світлій темі*/
+
+	/*"кольорові" кольори*/
+	--accent: #c4a8d9;
+	--neutral: #b8b8c2;
+	--disabled: #c1c7ca;
+	--error: #d6371f;
+}
+
+.dark {
+	--background: #0f0d15;
+	--foreground: #fff;
+}
+
+@theme inline {
+	--color-disabled: var(--disabled);
+	--color-error: var(--error);
+	--color-neutral: var(--neutral);
+	--color-disabled: var(--disabled);
+
+	--color-primary: var(--primary);
+	--color-secondary: var(--secondary);
+
+	/*кольори фону*/
+	--color-bgColor: var(--background);
+	--color-foreground: var(--foreground);
+
+	--color-accent: var(--accent);
+
+	--shadow-base: 0px 0px 14px 0px rgba(74, 184, 139, 1);
+	--radius-base: 20px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+}
