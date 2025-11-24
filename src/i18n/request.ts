@@ -1,5 +1,5 @@
-import en from '../messages/en.json'
-import uk from '../messages/uk.json'
+import en from '../../messages/en.json'
+import uk from '../../messages/uk.json'
 
 import { getRequestConfig } from 'next-intl/server'
 import { cookies } from 'next/headers'

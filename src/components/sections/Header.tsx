@@ -1,11 +1,11 @@
-import { Locale } from '@/types/types'
-
 import LocaleSwitcher from '../LocaleSwitcher'
 import Menu from '../Menu'
 import ThemeToggle from '../ThemeToggle'
 import Logo from '../UI/Logo'
 import BaseSection from '../base/BaseSections'
 import Wrapper from '../base/Wrapper'
+
+import { Locale } from '@/src/types/types'
 
 const Header = ({ locale }: { locale: Locale }) => {
 	return (

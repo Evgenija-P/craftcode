@@ -1,8 +1,7 @@
-import { Locale } from '@/types/types'
-
 import Header from '../../components/sections/Header'
 
-import { routing } from '@/i18n/routing'
+import { routing } from '@/src/i18n/routing'
+import { Locale } from '@/src/types/types'
 import '@/styles/globals.css'
 
 import type { Metadata } from 'next'

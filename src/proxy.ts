@@ -1,4 +1,3 @@
-
 import { routing } from './i18n/routing'
 import { Locale } from './types/types'
 
